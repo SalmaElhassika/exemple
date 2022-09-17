@@ -32,7 +32,7 @@
 import pandas as pd
 import streamlit as st
 
-import plotly.express as px
+
 #######################################
 
 
@@ -53,7 +53,8 @@ st.markdown(
     }}
     img{{
     	max-width:40%;
-    	margin-bottom:40px;
+    	margin-bottom:40
+	;
     }}
 </style>
 """,
@@ -217,8 +218,7 @@ with stats_container:
 	# don't forget to add titles to your plots
 	pie_col.subheader('How many of the users were subscribed?')
 
-	# This is an example of a plotly pie chart
-	fig = px.pie(user_type, values='count', names = 'user type', hover_name='user type')
+	
 
 	# TODO: change the values of the update_layout function and see the effect
 	fig.update_layout(showlegend=False,
